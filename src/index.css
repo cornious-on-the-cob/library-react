@@ -434,6 +434,7 @@ FEATURES
 .book__title {
   font-size: 20px;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .book__title--link {
@@ -443,6 +444,7 @@ FEATURES
 .book__ratings {
   margin-bottom: 8px;
   color: #fabf2a;
+  text-align: center;
 }
 
 .book__price--normal {
@@ -638,6 +640,7 @@ select {
 .book__price {
   font-size: 16px;
   margin: 8px 0 24px 0;
+  text-align: center;
 }
 
 .link__breadcrumbs {

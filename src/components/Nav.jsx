@@ -8,7 +8,7 @@ function Nav() {
       <a href="/">
         <img src={LibraryLogo} alt="" className="logo" />
       </a>
-      <ul className="nav__links">
+      <ul className="nav__links"> 
         <li className="nav__list">
           <a href="/" className="nav__link">
             Home

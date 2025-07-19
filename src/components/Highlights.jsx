@@ -5,7 +5,7 @@ import Highlight from "./ui/Highlight";
 export default function Highlights() {
   return (
     <section id="highlights">
-      <div className="container">
+      <div className="container"> 
         <div className="row">
           <h2 className="section__title">
             Why Choose <span className="purple">Library</span>

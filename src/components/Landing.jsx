@@ -5,7 +5,7 @@ import UndrawImage from "../assets/Undraw_Books.svg"
 export default function Landing() {
   return (
     <div>
-      <section id="landing">
+      <section id="landing"> 
         <header>
           <div className="header__container">
             <div className="header__description">
