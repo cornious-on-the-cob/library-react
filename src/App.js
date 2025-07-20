@@ -4,6 +4,7 @@ import Highlights from "./components/Highlights";
 import Nav from "./components/Nav";
 import Featured from "./components/Featured";
 import Discounted from "./components/Discounted";
+import Explore from "./components/Explore";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Highlights />
       <Featured />
       <Discounted />
+      <Explore />
     </div>
   );
 }
