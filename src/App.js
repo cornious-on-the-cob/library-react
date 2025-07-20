@@ -1,23 +1,20 @@
-import "./index.css"; 
-import Landing from "./components/Landing";
-import Highlights from "./components/Highlights";
+import "./index.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Nav from "./components/Nav";
-import Featured from "./components/Featured";
-import Discounted from "./components/Discounted";
-import Explore from "./components/Explore";
+import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import Books from "./components/Books";
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Landing />
-      <Highlights />
-      <Featured />
-      <Discounted />
-      <Explore />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <Route path="/" exact component={Home}/>
+        <Route path="/books" exact component={Books}/>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
