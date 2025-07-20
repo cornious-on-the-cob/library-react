@@ -15,9 +15,12 @@ export default function Book({ book }) {
         </a>
       </div>
       <div className="book__ratings">
-        {new Array(5).fill(0).map((_, index) => (
-          <FontAwesomeIcon icon="fa-solid fa-star" key={index}/>
+        {new Array(Math.floor(book.rating)).fill(0).map((_, index) => (
+          <FontAwesomeIcon icon="fa-solid fa-star" key={index} />
         ))}
+        {!Number.isInteger(book.rating) && (
+          <FontAwesomeIcon icon="fa-solid fa-star-half-stroke" />
+        )}
       </div>
       <div className="book__price">
         {book.salePrice ? (
