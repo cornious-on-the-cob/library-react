@@ -1,22 +1,25 @@
 import React from "react";
-import UndrawImage from "../assets/Undraw_Books.svg"
-
+import UndrawImage from "../assets/Undraw_Books.svg";
+import { Link } from "react-router-dom";
 
 export default function Landing() {
   return (
     <div>
-      <section id="landing"> 
+      <section id="landing">
         <header>
           <div className="header__container">
             <div className="header__description">
               <h1>The United States most Awarded Library Platform</h1>
-              <h2>Find Your Dream Book with <span className="purple">Library</span></h2>
-              <a href="#features">
+              <h2>
+                Find Your Dream Book with{" "}
+                <span className="purple">Library</span>
+              </h2>
+              <Link to="#features">
                 <button className="btn">Browse Books</button>
-              </a>
+              </Link>
             </div>
             <figure className="header__img--wrapper">
-                <img src={UndrawImage} alt="" />
+              <img src={UndrawImage} alt="" />
             </figure>
           </div>
         </header>
