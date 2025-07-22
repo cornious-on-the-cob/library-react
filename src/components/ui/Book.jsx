@@ -17,7 +17,7 @@ export default function Book({ book }) {
           {book.title}
         </Link>
       </div>
-      <Rating />
+      <Rating rating={4.5} />
       <Price salePrice={book.salePrice} originalPrice={book.originalPrice} />
     </div>
   );
