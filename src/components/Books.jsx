@@ -15,7 +15,7 @@ export default function Books({ books: initialBooks }) {
               (b.salePrice || b.originalPrice)
           )
       );
-    }
+    } 
     if (filter === "HIGH_TO_LOW") {
       setBooks(
         books
@@ -57,7 +57,7 @@ export default function Books({ books: initialBooks }) {
               </div>
               <div className="books">
                 {books.map((book) => (
-                  <Book book={book} key={books.id} />
+                  <Book book={book} key={book.id} />
                 ))}
               </div>
             </div>
