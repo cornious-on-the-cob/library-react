@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import Rating from "../components/ui/Rating";
@@ -6,10 +6,18 @@ import Price from "../components/ui/Price";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Book from "../components/ui/Book";
 
-export default function BookInfo({ books }) {
+export default function BookInfo({ books, addToCart, cart }) {
   const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
- 
+
+  function addBookToCart(book) {
+    addToCart(book);
+  }
+
+  function bookInCart() {
+    return cart.find(book => book.id === +id);
+  }
+
   return (
     <div id="books__body">
       <main id="books__main">
@@ -41,9 +49,18 @@ export default function BookInfo({ books }) {
                 <div className="book__summary">
                   <h3 className="book__summary--title">Summary</h3>
                   <p className="book__summary--para">
-                    This would be the summary for the book but there is no summary in my data
+                    This would be the summary for the book but there is no
+                    summary in my data
                   </p>
-                  <button className="btn">Add to Cart</button>
+                  {bookInCart() ? (
+                    <Link to={`/cart`}>
+                      <button className="btn">View Cart</button>
+                    </Link>
+                  ) : (
+                    <button className="btn" onClick={() => addBookToCart(book)}>
+                      Add to Cart
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
