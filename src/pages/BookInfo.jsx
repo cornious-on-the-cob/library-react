@@ -41,11 +41,7 @@ export default function BookInfo({ books }) {
                 <div className="book__summary">
                   <h3 className="book__summary--title">Summary</h3>
                   <p className="book__summary--para">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Laboriosam architecto omnis facere quas! Mollitia corrupti
-                    ipsum accusamus doloribus similique, nisi dicta dolorum
-                    inventore rerum, perferendis qui, quam id debitis
-                    exercitationem!
+                    This would be the summary for the book but there is no summary in my data
                   </p>
                   <button className="btn">Add to Cart</button>
                 </div>
