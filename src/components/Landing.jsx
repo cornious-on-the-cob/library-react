@@ -14,9 +14,9 @@ export default function Landing() {
                 Find Your Dream Book with{" "}
                 <span className="purple">Library</span>
               </h2>
-              <Link to="#features">
+              <a href="#features">
                 <button className="btn">Browse Books</button>
-              </Link>
+              </a>
             </div>
             <figure className="header__img--wrapper">
               <img src={UndrawImage} alt="" />
